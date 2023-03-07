@@ -365,7 +365,17 @@ public class Interface_calculator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     public void Ajouter(String btn){
-        EcranTfd.setText(btn);   
+        String EcranContent = EcranTfd.getText();
+        EcranContent += btn;
+        EcranTfd.setText(EcranContent);   
+    }
+    
+    
+    public void Calculer(){
+       String resultat = EcranTfd.getText();
+       //EcranTfd.setText(Integer.toString(resultat));
+       //int res = Integer.parseInt(resultat);
+       System.out.println((Integer.valueOf(resultat)));
     }
     private void Btn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn0ActionPerformed
         // TODO add your handling code here:
@@ -382,6 +392,7 @@ public class Interface_calculator extends javax.swing.JFrame {
 
     private void BtnResActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnResActionPerformed
         // TODO add your handling code here:
+        Calculer();
     }//GEN-LAST:event_BtnResActionPerformed
 
     private void Btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn1ActionPerformed
